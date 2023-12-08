@@ -1,0 +1,198 @@
+body {
+  background-color: #7c4063;
+}
+
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 0;
+}
+
+.data {
+  display: flex;
+  width: 400px;
+  margin: 0 auto;
+}
+
+#score-board {
+  background-color: #180a2e;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: #dfb0ca;
+  margin: 4px 6px 4px auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+}
+
+#score {
+  width: 45%;
+  margin: 0;
+  height: 100%;
+}
+#highest-score {
+  width: 55%;
+  margin: 0;
+  height: 100%;
+}
+
+#restartButton {
+  background-color: #180a2e;
+  font-family: "Young Serif", sans-serif;
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: #dfb0ca;
+  cursor: pointer;
+  border: 0;
+  margin: 4px auto 4px 6px;
+}
+
+#restartButton:hover {
+  box-shadow: 0 0 20px #dfb0ca;
+}
+
+#board {
+  width: 400px;
+  height: 400px;
+  background-color: #7c4063;
+  border: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 88px;
+  height: 88px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #180a2e;
+  color: aliceblue;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: bolder;
+  margin: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.b-2 {
+  background-color: #22cfca;
+  font-size: 65px;
+}
+.b-4 {
+  background-color: #1db8db;
+  font-size: 65px;
+}
+.b-8 {
+  background-color: #618dcb;
+  font-size: 65px;
+}
+.b-16 {
+  background-color: #9c2384;
+  font-size: 55px;
+}
+.b-32 {
+  background-color: #cd256d;
+  font-size: 55px;
+}
+.b-64 {
+  background-color: #9a4ebe;
+  font-size: 55px;
+}
+.b-128 {
+  background-color: #4d70b3;
+  font-size: 40px;
+}
+.b-256 {
+  background-color: #844d6c;
+  font-size: 40px;
+}
+.b-512 {
+  background-color: #442a54;
+  font-size: 40px;
+}
+.b-1024 {
+  background-color: #5b5ea6;
+  font-size: 30px;
+}
+.b-2048 {
+  background-color: #9f0054;
+  font-size: 30px;
+}
+.b-4096 {
+  background-color: #702242;
+  font-size: 30px;
+}
+.b-8192 {
+  background-color: #0d1c45;
+  font-size: 30px;
+}
+
+#popup {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  display: none;
+  background-image: url(image.png);
+}
+
+#popup-text {
+  font-size: 50px;
+  font-family: "Shizuru";
+  text-align: center;
+  font-style: italic;
+  color: cyan;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+#popup.visible {
+  display: block;
+}
+
+#gameOverButton {
+  background-color: #110a2e;
+  font-family: "Young Serif", sans-serif;
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: cyan;
+  cursor: pointer;
+  border: 0;
+}
+
+/* ----Animation---- */
+
+.box::before {
+  content: attr(data-text);
+  display: inline-block;
+  animation: numbers 3s infinite; /* Adjust the duration as needed */
+}
+
+@keyframes numbers {
+  0%,
+  100% {
+    transform: translateX(15%) rotate(-5deg);
+  }
+  50% {
+    transform: translateX(-15%) rotate(5deg);
+  }
+}

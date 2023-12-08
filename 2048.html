@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="2048.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Young+Serif:wght@300;400;700&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Shizuru&display=swap" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="heading">2048</h1>
+    <div class="data">
+      <button id="restartButton">New Game</button>
+      <div id="score-board">
+        <p id="score"></p>
+        <p id="highest-score"></p>
+      </div>
+    </div>
+    <div id="board"></div>
+
+    <div id="popup">
+      <p id="popup-text">
+        GAME OVER!!!<br /><span id="final-score">Score: 0</span><br />
+        <button id="gameOverButton" style="margin: 0 auto">New Game</button>
+      </p>
+    </div>
+
+    <script src="2048.js"></script>
+  </body>
+</html>
